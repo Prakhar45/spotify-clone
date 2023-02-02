@@ -1,0 +1,391 @@
+* {
+  transition: all 0.5s ease-in-out;
+  --lightgreen: green;
+  --darkgreen: palegreen;
+}
+
+html {
+  height: 100%;
+  font-family: Spotify Circular;
+  overflow: none;
+  display: table;
+  margin: auto;
+}
+
+body {
+  background-size: cover !important;
+  background: #1DB954;
+}
+
+canvas {
+  opacity: 0.1;
+}
+
+br,
+.material-icons {
+  user-select: none;
+}
+
+.gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(4vh);
+  background: linear-gradient(0deg, black, transparent);
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  user-select: none;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner-container {
+  position: relative;
+  z-index: 5;
+  color: white;
+  margin-left: -55vw;
+  margin-right: -20vw;
+}
+
+.inner-container > div > span {
+  position: relative;
+  z-index: 10 !important;
+}
+
+img,
+inputer .card {
+  border-radius: 10px;
+}
+
+img {
+  user-select: none;
+}
+
+.chip {
+  user-select: text;
+}
+
+.song-name {
+  text-overflow: ellipse;
+}
+
+code {
+  background: black;
+  padding: 2px;
+  border-radius: 2px;
+  color: white;
+}
+
+.alertify .ajs-footer .ajs-buttons .ajs-button.ajs-ok {
+  color: green !important;
+}
+
+.ajs-dialog {
+  max-width: 800px !important;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.card {
+  transition: all 0.25s ease-in-out;
+  background-color: rgba(0, 0, 0, 23%) !important;
+}
+
+.control-icon {
+  transition: all 0.25s ease-in-out !important;
+  horizontal-align: middle;
+  font-size: 30px;
+  color: white;
+  vertical-align: middle;
+  user-select: none;
+}
+
+.control-icon:hover {
+  color: var(--darkgreen) !important;
+}
+
+@font-face {
+  font-family: Spotify Circular;
+  font-weight: 800;
+  src: url(https://cdn.glitch.me/362ef2ab-55b7-48f2-a211-2949d088ad46%2FCircularSpUIv3T-Bold.woff2?v=1638197009584);
+}
+
+@font-face {
+  font-family: Spotify Circular;
+  font-weight: 900;
+  src: url(https://cdn.glitch.me/362ef2ab-55b7-48f2-a211-2949d088ad46%2FCircularSpUIv3T-Black.woff2?v=1638197009584);
+}
+
+@font-face {
+  font-family: Spotify Circular;
+  font-weight: 300;
+  src: url(https://cdn.glitch.me/362ef2ab-55b7-48f2-a211-2949d088ad46%2FCircularSpUIv3T-Light.woff2?v=1638197009584);
+}
+
+@font-face {
+  font-family: Spotify Circular;
+  font-weight: 400;
+  src: url(https://cdn.glitch.me/362ef2ab-55b7-48f2-a211-2949d088ad46%2FCircularSpUIv3T-Book.woff2?v=1638197009584);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  font-size: 40px;
+  margin: 0;
+}
+
+p {
+  margin: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--darkgreen);
+}
+
+.logo {
+  position: fixed;
+  z-index: 5;
+  top: 30;
+  left: 30;
+  filter: contrast(0) brightness(2);
+}
+
+.device-title {
+  color: white;
+  position: fixed;
+  top: 35;
+  left: 95;
+}
+
+.device-name {
+  position: fixed;
+  top: 55;
+  left: 95;
+  color: var(--darkgreen);
+}
+
+.album,
+#album-img {
+  display: inline;
+}
+
+.song-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cont {
+  float: right;
+  position: fixed;
+  padding-left: 20px;
+}
+
+center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: fixed;
+  left: 45vw;
+}
+
+.inner-cont2 {
+  width: 100vw;
+  margin-left: 21vw;
+}
+
+@media only screen and (max-width: 800px) {
+  .device-widget {
+    display: none;
+  }
+
+  .inner-container {
+    margin-left: -27vw;
+    text-align: center;
+    margin-top: -50vw;
+  }
+  
+  .note {
+    display:none!important;
+  }
+
+  .inner-container.no-margin {
+    margin-right: -10vw !important;
+    text-align: left !important;
+    width: 40vw;
+  }
+
+  .bottom {
+    position: static;
+  }
+
+  .album,
+  .container,
+  .song-name,
+  .inner-cont2,
+  .progress,
+  .progress-bar {
+    width: 40vw !important;
+  }
+
+  .cont {
+    float: none;
+    position: relative;
+    padding-left: 0px;
+  }
+
+  .container {
+    margin-left: -30vw;
+  }
+
+  .song-name {
+    padding-top: 20px;
+  }
+
+  center {
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+    position: static;
+  }
+}
+
+@media only screen and (max-height: 150px) {
+  .logo {
+    display: none;
+  }
+
+  .device-title,
+  .device-name {
+    display: none;
+  }
+}
+
+.progress {
+  display: inline;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: center;
+  width: 100vw;
+}
+
+.progress-bar {
+  position: relative;
+  display: inline-block;
+  height: 5px;
+  width: 85vw;
+  background-color: #eee;
+  vertical-align: 2px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.now {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 5px;
+  background: var(--darkgreen);
+  border-radius: 3px;
+}
+
+button {
+  background: #1DB954;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 7px;
+  font-family: Spotify Circular;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 800px) {
+  .progress-container {
+    margin-left: 15px;
+    margin-top: -10px;
+  }
+}
+
+.fullscreen {
+  position: fixed;
+  top: 30;
+  right: 30;
+  background: transparent;
+  z-index: 2;
+}
+
+.bottom {
+  position: absolute;
+  top: 11vw;
+}
+
+.device-title,
+.device-name {
+  z-index: 2;
+}
+
+.device-name {
+  color: var(--darkgreen);
+}
+
+*::selection {
+  background: var(--lightgreen);
+  transition: all 1s ease-in-out;
+}
+
+.device-widget {
+  background: rgba(0, 0, 0, 0.5);
+  top: 20;
+  left: 20;
+  width: 20vw;
+  height: 70px;
+  position: fixed;
+  z-index: 2;
+  user-select: none;
+  border-radius: 50px;
+}
+
+.note {
+  position: absolute;
+  top: 30;
+  right: 90;
+  z-index: 3;
+  background: white;
+  padding: 10px;
+  color: var(--darkgreen);
+  border-radius: 5px;
+  user-select: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.pause {
+  font-size: 50px;
+}
+
+.now::after {
+  content: "";
+  position: absolute;
+  left: 98.6%;
+  border-radius: 5px;
+  margin-top: -2.5px;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}

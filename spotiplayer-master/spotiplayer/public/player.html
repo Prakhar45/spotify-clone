@@ -1,0 +1,130 @@
+<html>
+  <head>
+    <meta property="og:title" content="SpotiPlayer" />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/362ef2ab-55b7-48f2-a211-2949d088ad46%2FNew%20Project%20(3)%20(2).png?v=1624003863216"
+    />
+    <meta property="og:url" content="https://spotiplayer-v2.glitch.me" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="A simple express project, that plays and controls your Spotify."
+    />
+    <meta name="theme-color" content="#33FF5E" />
+
+    <title>SpotiPlayer | A Spotify Player</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link href="https://i.imgur.com/XmrTgBt.png" rel="icon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/player.js"></script>
+    <script src="/sketch.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"
+    />
+  </head>
+  <body>
+    <div class="gradient"></div>
+    <div class="note">
+      <a onclick="alertify.alert('You are using <b>Spotify Free</b>, which disables the ability to use the controls (e.g. Play, Pause, Seek).');document.querySelector('.ajs-header').innerText = 'SpotiPlayer Alert';">You're using <a style="font-weight:bold;pointer-events:default;">Spotify Free</a>.</a>
+    </div>
+    <div class="top-bar">
+      <button onclick="fullScreen();" class="material-icons fullscreen">
+        fullscreen
+      </button>
+      <div class="device-widget">
+        <span class="device-title">PLAYING FROM</span><br /><span
+          class="device-name"
+          >Nowhere</span
+        >
+        <img
+          class="logo"
+          width="50px"
+          src="https://cdn.glitch.me/362ef2ab-55b7-48f2-a211-2949d088ad46%2FXmrTgBt.png?v=1638204190713"
+        />
+      </div>
+    </div>
+    <div style="padding-left:15%;position: relative;" class="container">
+      <div class="inner-container">
+        <div class="inner-cont2" style="padding:30px;width:80vw;">
+          <span style="width:100%;">
+            <span class="bottom">
+              <span id="album-metadata">
+                <span id="album-img">
+                  <img
+                    class="album"
+                    width="100vh"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRvYssDr398uR8OkHyOUvxjFIKh1OkrFnYmg&usqp=CAU"
+                    style="border-radius:0px!important;transition:all .5s ease-in-out;user-select:none;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"
+                  />
+                </span>
+                <span class="cont">
+                  <h5 style="user-select:auto;" class="song-name">
+                    Not Playing
+                  </h5>
+                  <span style="display: inline;" class="artists-name"></span>
+                </span> </span
+              ><br />
+              <center class="progress-container">
+                <span class="progresser" style="color:white;user-select:auto;"
+                  >0:00</span
+                >/<span
+                  style="color:white;user-select:auto;"
+                  class="progresser-alt"
+                  >0:00</span
+                >
+              </center>
+              <br />
+              <span class="progress" style="margin-top:10px;">
+                <span class="progress-bar">
+                  <div class="now"></div>
+                </span>
+              </span>
+              <br />
+              <center style="user-select:none;">
+                <a
+                  onclick="prev()"
+                  class="material-icons control-icon prev"
+                  >skip_previous</a
+                >
+                <a
+                  class="material-icons icons control-icon pause"
+                  >pause</a
+                >
+                <a
+                  onclick="next()"
+                  class="material-icons control-icon next"
+                  >skip_next</a
+                >
+              </center>
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  function fullScreen() {
+    if (document.fullscreen == false) {
+      document.querySelector("html").requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+  }
+</script>
